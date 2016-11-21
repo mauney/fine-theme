@@ -6,7 +6,7 @@ date_default_timezone_set( 'America/New_York' );
 $dates = [];
 $numTabs = 11;
 for ($i = 0; $i < $numTabs; $i++) {
-    $dates[] = time() + ( ($i-7) * 24 * 60 * 60 );
+    $dates[] = time() + ( ($i) * 24 * 60 * 60 );
 }
 
 ?>
