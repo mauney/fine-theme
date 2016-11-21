@@ -11,10 +11,11 @@
 <body <?php body_class(); ?>>
 	
 	<div class="container">
-		<div>
-			<span>Fine Arts Theatre</span>
-			<span class="openbtn">menu &#9776;</span>
-		</div>
+		
+		<nav id="fixed-nav">
+			<span class="nav-title">Fine Arts Theatre</span>
+			<span class="openbtn">&#9776;</span>
+		</nav>
 	
 		<nav class="site-nav" id="sidenav">
 			<div class="closebtn">&times;</div>
@@ -23,9 +24,5 @@
 			
 			
 	    <div class="hero-container">
-	    	<img src="<?php bloginfo('template_directory'); ?>/img/header3.png" alt="Fine Arts Theatre exterior photo">
-			<!-- site-header -->
-			<!--<header class="site-header">-->
-			<!--	<h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>-->
-			<!--</header>--><!-- /site-header -->
+	    	<img id="hero-img" src="<?php bloginfo('template_directory'); ?>/img/header3.png" alt="Fine Arts Theatre exterior photo">
 		</div>

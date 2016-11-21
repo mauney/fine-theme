@@ -1,8 +1,19 @@
+.sticky {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 2.5rem;
+  z-index: 60;
+  border-top: 0;
+}
+
 ul.tabs {
+  overflow-x: scroll;
   display: flex;
   list-style-type: none;
   padding: 0;
   margin: 0;
+  border-bottom: 0.4rem solid rgba(0, 0, 0, 0.6);
 }
 
 li.tab {
@@ -10,7 +21,7 @@ li.tab {
   text-align: center;
   color: #FFF;
   background-color: #000;
-  flex: 1;
+  flex: 1 0 20%;
   cursor: pointer;
 }
 

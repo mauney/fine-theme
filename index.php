@@ -4,18 +4,19 @@ get_header();
 
 date_default_timezone_set( 'America/New_York' );
 $dates = [];
-for ($i = 0; $i < 5; $i++) {
-    $dates[] = time() + ( ($i - 2) * 24 * 60 * 60 );
+$numTabs = 11;
+for ($i = 0; $i < $numTabs; $i++) {
+    $dates[] = time() + ( ($i-7) * 24 * 60 * 60 );
 }
 
 ?>
 
 <!-- TABS -->
-<ul class="tabs">
+<ul class="tabs" id="tabs">
     
     <?php
     
-    for ($i = 0; $i < 5; $i++) :
+    for ($i = 0; $i < $numTabs; $i++) :
         
         ?>
         
@@ -144,7 +145,7 @@ foreach ( $dates as $index => $day ) {
                 
             }
         } else {
-            echo '<h3>No schedule for ' . date('l, j F Y', $day) . '. Please check back later.</h3>';
+            echo '<h3 class="no-sched">No schedule for ' . date('l, j F Y', $day) . '. Please check back later.</h3>';
         }
         
         echo '</div><!-- /.movie-day #tab' . $index . '  -->';
@@ -154,10 +155,6 @@ foreach ( $dates as $index => $day ) {
             
     endif;
     
-}
-
-for ($i = 0; $i < 6; $i++) {
-    echo "<ul><li>extra words</li><li>to make</li><li>the window</li><li>scrollable,</li><li>I hope</li></ul>";
 }
 
 get_footer();

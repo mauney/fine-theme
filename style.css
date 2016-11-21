@@ -9,11 +9,17 @@ body {
   font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
   font-size: 16px;
   color: white;
+  /*background-color: pink;*/
   background-color: #0a0b0b;
 }
 
 * {
   box-sizing: border-box;
+}
+
+/* on the home page, this keeps empty calendar tabs from unsticking from lack of height */
+.container {
+  height: 130vh; 
 }
 
 /*.hero-container {*/
@@ -25,9 +31,36 @@ body {
 /*  position: relative;*/
 /*}*/
 
+#fixed-nav {
+  position: fixed;
+  height: 2.5rem;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #000;
+  color: #40917d;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/*.hide-me {*/
+/*  display: none;*/
+/*}*/
+
+.hero-container {
+  padding-top: 2.5rem;
+  /*visibility: hidden;*/
+  background-color: #000;
+}
+
 .hero-container img {
+  display: block;
+  /*height: 100%;*/
+  /*width: auto;*/
   width: 100%;
   height: auto;
+  /*margin-top: 2rem;*/
 }
 
 header h1 {
@@ -45,10 +78,12 @@ header a {
 /*sitenav */
 
 .openbtn {
-  color: #40917d;
-  text-align: right;
-  font-size: 1.6rem;
-  margin: 0.5rem 1rem;
+  float: right;
+  /*padding-top: 1.2rem;*/
+  /*color: #40917d;*/
+  /*text-align: right;*/
+  /*font-size: 1.6rem;*/
+  /*margin: 0.5rem 1rem;*/
   /*position: fixed;*/
   /*right: 2rem;*/
   /*top: 4rem;*/
@@ -58,13 +93,13 @@ header a {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 100;
     top: 0;
     left: 0;
     background-color: #111;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
+    padding-top: 0.5rem;
 }
 
 .show-me {
@@ -88,8 +123,21 @@ header a {
 
 .closebtn {
     position: absolute;
+    color: #818181;
     top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+    right: 2rem;
+    font-size: 3rem;
+    /*margin-left: 4rem;*/
+}
+
+.no-sched {
+  padding: 1rem;
+}
+
+.site-footer {
+  padding: 1rem;
+}
+
+.site-footer p {
+  margin: 0;
 }
