@@ -17,20 +17,6 @@ body {
   box-sizing: border-box;
 }
 
-/* on the home page, this keeps empty calendar tabs from unsticking from lack of height */
-.container {
-  height: 130vh; 
-}
-
-/*.hero-container {*/
-/*  background-image: url("./img/header3.png");*/
-/*  height: 200px;*/
-/*}*/
-
-/*.hero_container {*/
-/*  position: relative;*/
-/*}*/
-
 #fixed-nav {
   position: fixed;
   height: 2.5rem;
@@ -49,18 +35,14 @@ body {
 /*}*/
 
 .hero-container {
-  padding-top: 2.5rem;
-  /*visibility: hidden;*/
+  padding-top: 7rem;
   background-color: #000;
 }
 
 .hero-container img {
   display: block;
-  /*height: 100%;*/
-  /*width: auto;*/
   width: 100%;
   height: auto;
-  /*margin-top: 2rem;*/
 }
 
 header h1 {
@@ -79,14 +61,6 @@ header a {
 
 .openbtn {
   float: right;
-  /*padding-top: 1.2rem;*/
-  /*color: #40917d;*/
-  /*text-align: right;*/
-  /*font-size: 1.6rem;*/
-  /*margin: 0.5rem 1rem;*/
-  /*position: fixed;*/
-  /*right: 2rem;*/
-  /*top: 4rem;*/
 }
 
 .site-nav {

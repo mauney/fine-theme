@@ -21,8 +21,3 @@
 			<div class="closebtn">&times;</div>
 			<?php wp_nav_menu( array( 'theme-location' => 'primary' ) ); ?>
 		</nav>
-			
-			
-	    <div class="hero-container">
-	    	<img id="hero-img" src="<?php bloginfo('template_directory'); ?>/img/header3.png" alt="Fine Arts Theatre exterior photo">
-		</div>

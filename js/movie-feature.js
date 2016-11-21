@@ -14,34 +14,9 @@ jQuery(document).ready(function( $ ) {
     // $(".site-nav").style.width = "0";
   });
   
-  // stick the tab calendar bar to the top when scrolling
-  var stickyNavTop = $(window).width() / 2.4675; // magic number from header3.png aspect ratio
-  console.log('stickyNavTop: ' + stickyNavTop);
-  var stickyNav = function(){
-    var scrollTop = $(window).scrollTop();
-  	console.log('scrollTop: ' + scrollTop);
-       
-    if (scrollTop >= stickyNavTop) { 
-      $('#tabs').addClass('sticky');
-      $('.movie-day').css('margin-top', $("#tabs").outerHeight());
-    } else {
-      $('#tabs').removeClass('sticky');
-      $('.movie-day').css('margin-top', "");
-    }
-  };
-    
-  stickyNav();
-  
-  // var scrollFires = 0;
-  
-  $(window).scroll(function() {
-  	stickyNav();
-  // 	scrollFires++;
-  });
-  
   // show content based on tab selection
   $("li.tab").click(function() {
-    // console.log('scrollFires: ' + scrollFires);
+    
     if ($(this).hasClass("current") !== true) {
       var tab = $(this).attr("data-tab");
 
@@ -52,10 +27,9 @@ jQuery(document).ready(function( $ ) {
       $("#" + tab).addClass("current");
     }
     
-    // scroll to top of movie content if tabs are sticky and a new tab is selected
-    if ($('#tabs').hasClass('sticky')) {
-      window.scrollTo(0, stickyNavTop);
-    }
+    var movieScroll = $('.movie-day.current').offset().top - ($('#fixed-nav').outerHeight() + $('#tabs').outerHeight());
+    window.scrollTo(0, movieScroll);
+    
   });
 
   // show and hide extra movie content on button selection

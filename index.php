@@ -35,6 +35,11 @@ for ($i = 0; $i < $numTabs; $i++) {
 </ul>
 <!-- /Tabs -->
 
+<!-- hero container -->	
+<div class="hero-container">
+	<img id="hero-img" src="<?php bloginfo('template_directory'); ?>/img/header3.png" alt="Fine Arts Theatre exterior photo">
+</div>
+
 <?php
 
 foreach ( $dates as $index => $day ) {

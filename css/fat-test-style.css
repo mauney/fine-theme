@@ -1,13 +1,8 @@
-.sticky {
-  position: fixed;
-  width: 100%;
-  left: 0;
-  top: 2.5rem;
-  z-index: 60;
-  border-top: 0;
-}
-
 ul.tabs {
+  width: 100%;
+  position: fixed;
+  top: 2.5rem;
+  z-index: 50;
   overflow-x: scroll;
   display: flex;
   list-style-type: none;
